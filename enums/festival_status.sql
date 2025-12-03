@@ -1,0 +1,1 @@
+CREATE TYPE FestivalStatus AS ENUM ("Planned", "Active", "Finished");
