@@ -1,0 +1,1 @@
+CREATE TYPE WorkshopDifficulty AS ENUM ('Beginner', 'Intermediate', 'Advanced');

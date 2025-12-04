@@ -1,0 +1,1 @@
+CREATE TYPE ValidityType AS ENUM ('SingleDay', 'WholeFestival');

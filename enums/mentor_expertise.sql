@@ -1,0 +1,1 @@
+CREATE TYPE MentorExpertise AS ENUM ('MusicProduction', 'SoundEngineering', 'StagePerformance');

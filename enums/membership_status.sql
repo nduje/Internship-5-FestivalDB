@@ -1,0 +1,1 @@
+CREATE TYPE MembershipStatus AS ENUM ('Active', 'Expired');

@@ -1,0 +1,1 @@
+CREATE TYPE StaffType AS ENUM ('Organizer', 'Technician', 'SecurityGuard', 'Volunteer');

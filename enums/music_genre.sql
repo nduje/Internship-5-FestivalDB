@@ -1,0 +1,1 @@
+CREATE TYPE MusicGenre AS ENUM ("Rock", "Pop", "Techno", "Jazz", "Metal", "Hip-hop");
