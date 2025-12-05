@@ -1,1 +1,0 @@
-CREATE TYPE StageLocation AS ENUM ("Main", "Forest", "Beach");

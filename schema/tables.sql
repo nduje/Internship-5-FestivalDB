@@ -32,7 +32,7 @@ CREATE TABLE Performances (
 	PerformerId INT REFERENCES Performers(PerformerId) NOT NULL,
 	StartTime TIMESTAMP NOT NULL,
 	EndTime TIMESTAMP NOT NULL,
-	ExpectedVisitorsCount INT NOT NULL
+	ExpectedVisitorsCount SMALLINT NOT NULL
 );
 
 CREATE TABLE Visitors (

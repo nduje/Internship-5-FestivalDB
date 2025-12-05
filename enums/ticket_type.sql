@@ -1,1 +1,0 @@
-CREATE TYPE TicketType AS ENUM ('SingleDay', 'Festival', 'VIP', 'Camp');

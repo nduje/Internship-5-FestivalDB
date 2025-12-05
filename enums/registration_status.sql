@@ -1,1 +1,0 @@
-CREATE TYPE RegistrationStatus AS ENUM ('Registered', 'Cancelled', 'Attended');
