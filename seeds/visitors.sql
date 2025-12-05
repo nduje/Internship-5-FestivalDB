@@ -998,3 +998,9 @@ insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country
 insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country, EmailAddress) values (998, 'Alan', 'Grigorey', '1989-06-08', 'Mortka', 'Russia', 'agrigoreyrp@si.edu');
 insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country, EmailAddress) values (999, 'Hilliard', 'Chimenti', '2010-05-22', 'Nāḩīyat Saddat al Hindīyah', 'Iraq', 'hchimentirq@china.com.cn');
 insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country, EmailAddress) values (1000, 'Willard', 'Stell', '1981-01-29', 'Daidaon', 'China', 'wstellrr@google.com.au');
+insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country, EmailAddress) values (1001, 'Marko', 'Livaja', '1983-08-26', 'Split', 'Croatia', 'marko.livaja@gmail.com');
+insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country, EmailAddress) values (1002, 'Tonci', 'Huljic', '1961-10-29', 'Split', 'Croatia', 'tonci.huljic@gmail.com');
+insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country, EmailAddress) values (1003, 'Ivica', 'Puljak', '1969-08-27', 'Split', 'Croatia', 'ivica.puljak@gmail.com');
+insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country, EmailAddress) values (1004, 'Doris', 'Dragovic', '1961-04-16', 'Split', 'Croatia', 'doris.dragovic@gmail.com');
+insert into Visitors (VisitorId, FirstName, LastName, DateOfBirth, City, Country, EmailAddress) values (1005, 'Oliver', 'Dragojevic', '1947-07-12', 'Split', 'Croatia', 'oliver.dragojevic@gmail.com');
+

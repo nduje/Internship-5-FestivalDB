@@ -7,18 +7,19 @@ WHERE Difficulty = 'Advanced'
 	AND Festivals.EndDate <= '2025-12-31';
 
 SELECT
-	Performers.Name,
-	Festivals.Name,
+	Performers.Name AS PerformerName,
+	Festivals.Name AS FestivalName,
 	Stages.Location,
 	Performances.StartTime,
-	Performances.EndTime
+	Performances.EndTime,
+	ExpectedVisitorsCount
 FROM Performances
 JOIN Performers
 	ON Performances.PerformerId = Performers.PerformerId
-JOIN Festivals
-	ON Performances.FestivalId = Festivals.FestivalId
 JOIN Stages
 	ON Performances.StageId = Stages.StageId
+JOIN Festivals
+	ON Stages.FestivalId = Festivals.FestivalId
 WHERE ExpectedVisitorsCount > 10000;
 
 SELECT *
@@ -64,11 +65,11 @@ WHERE Price > 120;
 
 SELECT *
 FROM Tickets
-WHERE TicketType = 'VIP';
+WHERE Type = 'VIP';
 
 SELECT *
 FROM Tickets
-WHERE ValidityType = 'WholeFestival';
+WHERE Validity = 'WholeFestival';
 
 SELECT *
 FROM Staff

@@ -998,3 +998,13 @@ insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsO
 insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (998, 'Erek', 'Spellecy', 1956, 'MusicProduction', 3);
 insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (999, 'Kaylil', 'Riggoll', 1971, 'StagePerformance', 6);
 insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1000, 'Nettie', 'McConachie', 1991, 'SoundEngineering', 10);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1001, 'Nara', 'Castiglio', 1970, 'StagePerformance', 15);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1002, 'Celestine', 'Mewhirter', 1973, 'SoundEngineering', 14);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1003, 'Jayme', 'Parsisson', 1975, 'MusicProduction', 14);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1004, 'Giacinta', 'Seson', 1980, 'StagePerformance', 11);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1005, 'Filippa', 'Solley', 1972, 'MusicProduction', 12);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1006, 'Ninette', 'Moneti', 1978, 'MusicProduction', 14);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1007, 'Cathyleen', 'Fahrenbacher', 1980, 'SoundEngineering', 12);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1008, 'Natalina', 'Dionisetti', 1978, 'MusicProduction', 12);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1009, 'Sutton', 'Billsberry', 1972, 'StagePerformance', 12);
+insert into Mentors (MentorId, FirstName, LastName, BirthYear, Expertise, YearsOfExperience) values (1010, 'Kelcie', 'Beekman', 1971, 'SoundEngineering', 12);

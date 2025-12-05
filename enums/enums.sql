@@ -1,8 +1,8 @@
-CREATE TYPE FestivalStatus AS ENUM ("Planned", "Active", "Finished");
-CREATE TYPE StageLocation AS ENUM ("Main", "Forest", "Beach");
+CREATE TYPE FestivalStatus AS ENUM ('Planned', 'Active', 'Finished');
+CREATE TYPE StageLocation AS ENUM ('Main', 'Forest', 'Beach');
 CREATE TYPE TicketType AS ENUM ('SingleDay', 'Festival', 'VIP', 'Camp');
 CREATE TYPE ValidityType AS ENUM ('SingleDay', 'WholeFestival');
-CREATE TYPE MusicGenre AS ENUM ("Rock", "Pop", "Techno", "Jazz", "Metal", "Hip-hop");
+CREATE TYPE MusicGenre AS ENUM ('Rock', 'Pop', 'Techno', 'Jazz', 'Metal', 'Hip-hop');
 CREATE TYPE StaffType AS ENUM ('Organizer', 'Technician', 'SecurityGuard', 'Volunteer');
 CREATE TYPE MentorExpertise AS ENUM ('MusicProduction', 'SoundEngineering', 'StagePerformance');
 CREATE TYPE MembershipStatus AS ENUM ('Active', 'Expired');

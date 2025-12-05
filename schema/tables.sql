@@ -1,7 +1,7 @@
 CREATE TABLE Festivals (
 	FestivalId SERIAL PRIMARY KEY,
-	Name VARCHAR(30) NOT NULL,
-	City VARCHAR(30) NOT NULL,
+	Name VARCHAR(60) NOT NULL,
+	City VARCHAR(60) NOT NULL,
 	FestivalCapacity INT NOT NULL,
 	StartDate DATE NOT NULL,
 	EndDate DATE NOT NULL,
@@ -19,15 +19,14 @@ CREATE TABLE Stages (
 CREATE TABLE Performers (
 	PerformerId SERIAL PRIMARY KEY,
 	Name VARCHAR(60) NOT NULL,
-	Country VARCHAR(30) NOT NULL,
+	Country VARCHAR(60) NOT NULL,
 	Genre MusicGenre,
 	MembersCount SMALLINT NOT NULL,
 	IsActive BOOLEAN DEFAULT FALSE
-)
+);
 
 CREATE TABLE Performances (
 	PerformanceId SERIAL PRIMARY KEY,
-	FestivalId INT REFERENCES Festivals(FestivalId) NOT NULL,
 	StageId INT REFERENCES Stages(StageId) NOT NULL,
 	PerformerId INT REFERENCES Performers(PerformerId) NOT NULL,
 	StartTime TIMESTAMP NOT NULL,
@@ -37,11 +36,11 @@ CREATE TABLE Performances (
 
 CREATE TABLE Visitors (
 	VisitorId SERIAL PRIMARY KEY,
-	FirstName VARCHAR(30) NOT NULL,
-	LastName VARCHAR(30) NOT NULL,
+	FirstName VARCHAR(60) NOT NULL,
+	LastName VARCHAR(60) NOT NULL,
 	DateOfBirth DATE NOT NULL,
-	City VARCHAR(30) NOT NULL,
-	Country VARCHAR(30) NOT NULL,
+	City VARCHAR(60) NOT NULL,
+	Country VARCHAR(60) NOT NULL,
 	EmailAddress VARCHAR(60) NOT NULL
 );
 
@@ -58,16 +57,13 @@ CREATE TABLE Purchases (
 	PurchaseId SERIAL PRIMARY KEY,
 	VisitorId INT REFERENCES Visitors(VisitorId),
 	TicketId INT REFERENCES Tickets(TicketId),
-	Quantity SMALLINT NOT NULL,
-	TotalAmount DECIMAL(10,2) GENERATED ALWAYS AS (
-        Quantity * (SELECT Price FROM Tickets WHERE Tickets.TicketId = Purchases.TicketId)
-    ) STORED
+	Quantity SMALLINT NOT NULL
 );
 
 CREATE TABLE Workshops (
 	WorkshopId SERIAL PRIMARY KEY,
 	FestivalId INT REFERENCES Festivals(FestivalId),
-	Name VARCHAR(30) NOT NULL,
+	Name VARCHAR(60) NOT NULL,
 	MaximumCapacity SMALLINT NOT NULL,
 	DurationHours SMALLINT NOT NULL,
 	Difficulty WorkshopDifficulty NOT NULL,
@@ -84,8 +80,8 @@ CREATE TABLE WorkshopsVisitors (
 
 CREATE TABLE Mentors (
 	MentorId SERIAL PRIMARY KEY,
-	FirstName VARCHAR(30) NOT NULL,
-	LastName VARCHAR(30) NOT NULL,
+	FirstName VARCHAR(60) NOT NULL,
+	LastName VARCHAR(60) NOT NULL,
 	BirthYear SMALLINT NOT NULL,
 	Expertise MentorExpertise NOT NULL,
 	YearsOfExperience SMALLINT NOT NULL
@@ -99,17 +95,17 @@ CREATE TABLE WorkshopsMentors (
 CREATE TABLE Staff (
 	StaffId SERIAL PRIMARY KEY,
 	FestivalId INT REFERENCES Festivals(FestivalId),
-	FirstName VARCHAR(30) NOT NULL,
-	LastName VARCHAR(30) NOT NULL,
+	FirstName VARCHAR(60) NOT NULL,
+	LastName VARCHAR(60) NOT NULL,
 	DateOfBirth DATE NOT NULL,
-	Role StaffRole NOT NULL,
+	Role StaffType NOT NULL,
 	Contact TEXT NOT NULL,
 	IsSecurityTrained BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE Memberships (
 	MembershipId SERIAL PRIMARY KEY,
-	VisitorId INT REFERENCES Visitors(VisitorId),
+	VisitorId INT UNIQUE REFERENCES Visitors(VisitorId),
 	ActivationDate DATE NOT NULL,
 	Status MembershipStatus NOT NULL
 );
