@@ -7,9 +7,9 @@ WHERE Difficulty = 'Advanced'
 	AND Festivals.EndDate <= '2025-12-31';
 
 SELECT
-	Performers.Name AS PerformerName,
-	Festivals.Name AS FestivalName,
-	Stages.Location AS StageLocation,
+	Performers.Name,
+	Festivals.Name,
+	Stages.Location,
 	Performances.StartTime,
 	Performances.EndTime
 FROM Performances

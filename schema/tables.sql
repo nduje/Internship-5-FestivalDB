@@ -2,7 +2,7 @@ CREATE TABLE Festivals (
 	FestivalId SERIAL PRIMARY KEY,
 	Name VARCHAR(30) NOT NULL,
 	City VARCHAR(30) NOT NULL,
-	FestivalCapacity BIGINT NOT NULL,
+	FestivalCapacity INT NOT NULL,
 	StartDate DATE NOT NULL,
 	EndDate DATE NOT NULL,
 	Status FestivalStatus DEFAULT 'Planned'
@@ -11,8 +11,8 @@ CREATE TABLE Festivals (
 CREATE TABLE Stages (
 	StageId SERIAL PRIMARY KEY,
 	FestivalId INT REFERENCES Festivals(FestivalId),
-	Location StageLocation,
-	StageCapacity BIGINT NOT NULL,
+	Location StageLocation NOT NULL,
+	StageCapacity INT NOT NULL,
 	IsCovered BOOLEAN DEFAULT FALSE
 );
 
@@ -47,7 +47,6 @@ CREATE TABLE Visitors (
 
 CREATE TABLE Tickets (
 	TicketId SERIAL PRIMARY KEY,
-	VisitorId INT REFERENCES Visitors(VisitorId),
 	FestivalId INT REFERENCES Festivals(FestivalId),
 	Type TicketType NOT NULL,
 	Price DECIMAL(10,2) NOT NULL,
@@ -58,9 +57,11 @@ CREATE TABLE Tickets (
 CREATE TABLE Purchases (
 	PurchaseId SERIAL PRIMARY KEY,
 	VisitorId INT REFERENCES Visitors(VisitorId),
-	FestivalId INT REFERENCES Festivals(FestivalId),
 	TicketId INT REFERENCES Tickets(TicketId),
-	Quantity SMALLINT NOT NULL
+	Quantity SMALLINT NOT NULL,
+	TotalAmount DECIMAL(10,2) GENERATED ALWAYS AS (
+        Quantity * (SELECT Price FROM Tickets WHERE Tickets.TicketId = Purchases.TicketId)
+    ) STORED
 );
 
 CREATE TABLE Workshops (
